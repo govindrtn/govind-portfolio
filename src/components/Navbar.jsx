@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { TemplateSwitcher } from "./TemplateSwitcher";
 import { ThemeToggle } from "./ThemeToggle";
 import { portfolioData } from "../data/portfolioData";
 
@@ -63,6 +64,7 @@ export function Navbar() {
 
           {/* Theme Toggle + Mobile Menu Button */}
           <div className="flex items-center gap-4">
+            <TemplateSwitcher />
             <ThemeToggle />
 
             <button

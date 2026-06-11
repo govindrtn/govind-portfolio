@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Mail, MapPin, Sparkles } from "lucide-react";
+import { AnimatedCounter } from "./AnimatedCounter";
 import { portfolioData } from "../data/portfolioData";
 
 const containerVariants = {
@@ -57,7 +58,7 @@ export function Hero() {
           animate="visible"
           className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-center"
         >
-          <div className="text-center lg:text-left">
+          <div className="hero-copy text-center lg:text-left">
             <motion.div variants={itemVariants} className="space-y-5">
             <div className="eyebrow mx-auto lg:mx-0">
               <Sparkles className="w-4 h-4" />
@@ -120,7 +121,7 @@ export function Hero() {
             </motion.div>
           </div>
 
-          <motion.div variants={itemVariants} className="relative max-w-md mx-auto w-full">
+          <motion.div variants={itemVariants} className="hero-visual relative max-w-md mx-auto w-full">
             <motion.div animate={{ y: [0, -10, 0] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }} className="profile-frame">
               <div className="profile-image-wrap">
                 <img src={portfolioData.personal.profileImage} alt={`${portfolioData.personal.name} profile`} className="profile-image" />
@@ -130,7 +131,11 @@ export function Hero() {
             <div className="grid grid-cols-2 gap-3 mt-5">
               {stats.map((stat) => (
                 <motion.div key={stat.label} whileHover={{ y: -5 }} className="stat-card">
-                  <strong>{stat.value}</strong>
+                  <AnimatedCounter
+                    value={stat.value}
+                    decimals={stat.decimals}
+                    suffix={stat.suffix}
+                  />
                   <span>{stat.label}</span>
                 </motion.div>
               ))}

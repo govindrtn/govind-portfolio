@@ -42,10 +42,15 @@ export const portfolioData = {
   },
 
   stats: [
-    { label: "Years Experience", value: experienceLabel },
-    { label: "Product Domains", value: "4+" },
-    { label: "Featured Projects", value: "4" },
-    { label: "Full-Stack Build", value: "1" },
+    {
+      label: "Years Experience",
+      value: experienceYears,
+      decimals: 1,
+      suffix: "+",
+    },
+    { label: "Product Domains", value: 4, suffix: "+" },
+    { label: "Featured Projects", value: 4 },
+    { label: "Full-Stack Build", value: 1 },
   ],
 
   experience: [
