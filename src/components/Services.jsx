@@ -33,7 +33,7 @@ export function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="section-heading text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Services I <span className="gradient-text">Offer</span>
@@ -58,7 +58,7 @@ export function Services() {
                 key={index}
                 variants={itemVariants}
                 whileHover={{ y: -8 }}
-                className="theme-hover-border glass-dark p-6 rounded-lg border border-slate-700 transition-all group"
+                className="service-card theme-hover-border glass-dark p-6 rounded-lg border border-slate-700 transition-all group"
               >
                 <div className="theme-accent-gradient w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   {IconComponent && <IconComponent className="w-6 h-6 text-white" />}

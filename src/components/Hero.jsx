@@ -84,7 +84,7 @@ export function Hero() {
 
             <motion.div
               variants={itemVariants}
-              className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mt-8"
+              className="hero-actions flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mt-8"
             >
               <motion.a
                 href="#projects"
@@ -109,7 +109,7 @@ export function Hero() {
 
             <motion.div
               variants={itemVariants}
-              className="flex justify-center lg:justify-start gap-3 mt-6"
+              className="hero-socials flex justify-center lg:justify-start gap-3 mt-6"
             >
               {[
                 {

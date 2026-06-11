@@ -3,15 +3,15 @@ import { Check, Columns, LayoutGrid, List, Rows } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const layouts = [
-  { id: "classic", label: "Classic", Icon: LayoutGrid },
-  { id: "split", label: "Split", Icon: Columns },
-  { id: "editorial", label: "Editorial", Icon: Rows },
-  { id: "compact", label: "Compact", Icon: List },
+  { id: "classic", label: "Classic", description: "Balanced cards", Icon: LayoutGrid },
+  { id: "split", label: "Split", description: "Visual first", Icon: Columns },
+  { id: "editorial", label: "Editorial", description: "Magazine style", Icon: Rows },
+  { id: "compact", label: "Compact", description: "Dense and quick", Icon: List },
 ];
 
 export function LayoutSwitcher() {
   const [isOpen, setIsOpen] = useState(false);
-  const [layout, setLayout] = useState(() => localStorage.getItem("portfolio-layout") || "classic");
+  const [layout, setLayout] = useState(() => localStorage.getItem("portfolio-layout") || "split");
 
   useEffect(() => {
     document.documentElement.dataset.layout = layout;
@@ -41,7 +41,7 @@ export function LayoutSwitcher() {
             className="template-menu"
           >
             <p className="template-menu-title">Choose layout</p>
-            {layouts.map(({ id, label, Icon }) => (
+            {layouts.map(({ id, label, description, Icon }) => (
               <button
                 key={id}
                 type="button"
@@ -54,7 +54,10 @@ export function LayoutSwitcher() {
                 <span className="layout-option-icon">
                   <Icon className="h-4 w-4" />
                 </span>
-                <span>{label}</span>
+                <span className="min-w-0">
+                  <span className="block">{label}</span>
+                  <span className="layout-option-description">{description}</span>
+                </span>
                 {layout === id && <Check className="ml-auto h-4 w-4" />}
               </button>
             ))}

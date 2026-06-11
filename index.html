@@ -13,7 +13,7 @@
     <script>
       const savedTheme = localStorage.getItem("theme");
       const savedTemplate = localStorage.getItem("portfolio-template") || "ocean";
-      const savedLayout = localStorage.getItem("portfolio-layout") || "classic";
+      const savedLayout = localStorage.getItem("portfolio-layout") || "split";
       const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
       document.documentElement.dataset.template = savedTemplate;
       document.documentElement.dataset.layout = savedLayout;

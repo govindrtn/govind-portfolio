@@ -39,7 +39,7 @@ export function Skills() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="section-heading text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Technical <span className="gradient-text">Skills</span>
@@ -57,7 +57,7 @@ export function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
               viewport={{ once: true }}
-              className="glass-dark p-6 rounded-lg border border-slate-700"
+              className="skill-category glass-dark p-6 rounded-lg border border-slate-700"
             >
               <h3 className="theme-accent-text text-xl font-bold mb-6">{category.title}</h3>
 
