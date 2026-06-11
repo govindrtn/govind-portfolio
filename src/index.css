@@ -507,12 +507,12 @@ html[data-layout="editorial"] .profile-frame::before {
 }
 
 html[data-layout="editorial"] .profile-image-wrap {
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 4 / 5;
   border-radius: 0;
 }
 
 html[data-layout="editorial"] .profile-image {
-  object-position: center 28%;
+  object-position: center top;
 }
 
 html[data-layout="editorial"] .stats-grid {
@@ -745,7 +745,7 @@ html[data-layout="compact"] .skills-core {
   }
 
   html[data-layout="editorial"] .hero-visual {
-    max-width: 46rem;
+    max-width: 30rem;
   }
 
   html[data-layout="compact"] .stats-grid {
