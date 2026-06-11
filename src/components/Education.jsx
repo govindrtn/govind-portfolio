@@ -29,21 +29,21 @@ export function Education() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           whileHover={{ y: -5 }}
-          className="max-w-2xl mx-auto glass-dark p-8 rounded-lg border-2 border-blue-500/50 hover:border-blue-400 transition-all"
+          className="theme-accent-border max-w-2xl mx-auto glass-dark p-8 rounded-lg border-2 transition-all"
         >
           <div className="flex items-start gap-4 mb-6">
-            <div className="w-14 h-14 bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+            <div className="theme-accent-gradient w-14 h-14 rounded-lg flex items-center justify-center flex-shrink-0">
               <BookOpen className="w-7 h-7 text-white" />
             </div>
             <div>
               <h3 className="text-2xl font-bold text-white">{degree}</h3>
-              <p className="text-blue-400 font-semibold">{college}</p>
+              <p className="theme-accent-text font-semibold">{college}</p>
             </div>
           </div>
 
           <div className="space-y-3 text-slate-300">
             <div className="flex items-center gap-3">
-              <MapPin className="w-5 h-5 text-blue-400 flex-shrink-0" />
+              <MapPin className="theme-accent-text w-5 h-5 flex-shrink-0" />
               <div>
                 <p className="text-sm text-slate-500">University</p>
                 <p className="font-semibold">{university}</p>
@@ -51,7 +51,7 @@ export function Education() {
             </div>
 
             <div className="flex items-center gap-3">
-              <Calendar className="w-5 h-5 text-blue-400 flex-shrink-0" />
+              <Calendar className="theme-accent-text w-5 h-5 flex-shrink-0" />
               <div>
                 <p className="text-sm text-slate-500">Duration</p>
                 <p className="font-semibold">{duration}</p>

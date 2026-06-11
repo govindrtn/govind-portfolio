@@ -69,7 +69,7 @@ export function Hero() {
               <span className="gradient-text block">fast and effortless.</span>
             </h1>
 
-            <h2 className="text-xl sm:text-2xl text-blue-600 dark:text-blue-400 font-semibold">
+            <h2 className="theme-accent-text text-xl sm:text-2xl font-semibold">
               Hi, I&apos;m {portfolioData.personal.name}, a React Developer.
             </h2>
 
@@ -77,7 +77,7 @@ export function Hero() {
               {portfolioData.personal.description}
             </p>
             <div className="flex items-center justify-center lg:justify-start gap-2 text-sm text-slate-500 dark:text-slate-400">
-              <MapPin className="w-4 h-4 text-blue-500" />
+              <MapPin className="theme-accent-text w-4 h-4" />
               {portfolioData.personal.location}
             </div>
             </motion.div>

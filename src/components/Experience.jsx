@@ -23,7 +23,7 @@ export function Experience() {
 
         <div className="space-y-8 relative">
           {/* Timeline line */}
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-blue-500 to-blue-600" />
+          <div className="theme-accent-gradient hidden md:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full" />
 
           {portfolioData.experience.map((exp, index) => (
             <motion.div
@@ -38,7 +38,7 @@ export function Experience() {
               <div className="hidden md:flex justify-center">
                 <motion.div
                   whileHover={{ scale: 1.2 }}
-                  className="w-4 h-4 bg-blue-500 rounded-full border-4 border-slate-900 relative z-10"
+                  className="theme-accent-bg w-4 h-4 rounded-full border-4 border-slate-900 relative z-10"
                 />
               </div>
 
@@ -49,12 +49,12 @@ export function Experience() {
               >
                 <div className="flex items-start justify-between mb-3">
                   <div>
-                    <h3 className="text-xl font-bold text-blue-400">
+                    <h3 className="theme-accent-text text-xl font-bold">
                       {exp.role}
                     </h3>
                     <p className="text-slate-400">{exp.company}</p>
                   </div>
-                  <Briefcase className="w-5 h-5 text-blue-500 flex-shrink-0" />
+                  <Briefcase className="theme-accent-text w-5 h-5 flex-shrink-0" />
                 </div>
 
                 <div className="flex items-center gap-2 text-sm text-slate-500 mb-4">
@@ -63,12 +63,12 @@ export function Experience() {
                 </div>
 
                 {exp.project && (
-                  <p className="text-blue-300 text-sm font-semibold mb-3">
+                  <p className="theme-accent-text text-sm font-semibold mb-3">
                     Project: {exp.project}
                   </p>
                 )}
                 {exp.projects && (
-                  <p className="text-blue-300 text-sm font-semibold mb-3">
+                  <p className="theme-accent-text text-sm font-semibold mb-3">
                     Projects: {exp.projects.join(", ")}
                   </p>
                 )}
@@ -85,7 +85,7 @@ export function Experience() {
                         key={idx}
                         className="text-sm text-slate-400 flex items-start gap-2"
                       >
-                        <span className="text-blue-400 mt-1">•</span>
+                        <span className="theme-accent-text mt-1">•</span>
                         {resp}
                       </li>
                     ))}

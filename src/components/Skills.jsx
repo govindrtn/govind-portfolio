@@ -59,7 +59,7 @@ export function Skills() {
               viewport={{ once: true }}
               className="glass-dark p-6 rounded-lg border border-slate-700"
             >
-              <h3 className="text-xl font-bold text-blue-400 mb-6">
+              <h3 className="theme-accent-text text-xl font-bold mb-6">
                 {category.title}
               </h3>
 
@@ -77,7 +77,7 @@ export function Skills() {
                     whileHover={{ scale: 1.1, y: -2 }}
                     className="badge cursor-pointer group"
                   >
-                    <span className="group-hover:text-blue-200 transition-colors">
+                    <span>
                       {skill}
                     </span>
                   </motion.div>
@@ -95,7 +95,7 @@ export function Skills() {
           viewport={{ once: true }}
           className="mt-12 glass-dark p-8 rounded-lg border border-slate-700"
         >
-          <h3 className="text-xl font-bold text-blue-400 mb-8">
+          <h3 className="theme-accent-text text-xl font-bold mb-8">
             Core Strengths
           </h3>
 
@@ -113,7 +113,7 @@ export function Skills() {
                   <span className="text-slate-300 font-medium">
                     {skill.name}
                   </span>
-                  <span className="text-blue-400 font-bold">
+                  <span className="theme-accent-text font-bold">
                     {skill.level}%
                   </span>
                 </div>
@@ -123,7 +123,7 @@ export function Skills() {
                     whileInView={{ width: `${skill.level}%` }}
                     transition={{ duration: 1, delay: (index % 7) * 0.08 }}
                     viewport={{ once: true }}
-                    className="h-full bg-gradient-to-r from-blue-500 to-blue-400 rounded-full"
+                    className="theme-progress h-full rounded-full"
                   />
                 </div>
               </div>

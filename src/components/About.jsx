@@ -41,7 +41,7 @@ export function About() {
               whileHover={{ y: -4 }}
               className="highlight-card"
             >
-              <CheckCircle2 className="w-5 h-5 text-blue-400 flex-shrink-0 mt-1" />
+              <CheckCircle2 className="theme-accent-text w-5 h-5 flex-shrink-0 mt-1" />
               <span>{highlight}</span>
             </motion.div>
           ))}

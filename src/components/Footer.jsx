@@ -56,7 +56,7 @@ export function Footer() {
                 <li key={link}>
                   <a
                     href={`#${link.toLowerCase()}`}
-                    className="text-slate-400 hover:text-blue-400 transition-colors"
+                    className="theme-hover-text text-slate-400 transition-colors"
                   >
                     {link}
                   </a>
@@ -88,7 +88,7 @@ export function Footer() {
                     }
                     whileHover={{ scale: 1.2, rotate: 10 }}
                     whileTap={{ scale: 0.95 }}
-                    className="p-2 bg-slate-800/50 hover:bg-blue-600 text-slate-300 hover:text-white rounded-lg transition-all"
+                    className="theme-social p-2 bg-slate-800/50 text-slate-300 rounded-lg transition-all"
                     aria-label={link.name}
                   >
                     <Icon className="w-5 h-5" />
@@ -116,7 +116,7 @@ export function Footer() {
             <p>Built with React.js, Vite, and Tailwind CSS</p>
             <a
               href="#home"
-              className="text-blue-400 hover:text-blue-300 transition-colors"
+              className="theme-accent-text transition-colors"
             >
               Back to top ↑
             </a>

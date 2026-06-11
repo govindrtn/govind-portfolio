@@ -58,14 +58,14 @@ export function Services() {
                 key={index}
                 variants={itemVariants}
                 whileHover={{ y: -8 }}
-                className="glass-dark p-6 rounded-lg border border-slate-700 hover:border-blue-500 transition-all group"
+                className="theme-hover-border glass-dark p-6 rounded-lg border border-slate-700 transition-all group"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <div className="theme-accent-gradient w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   {IconComponent && (
                     <IconComponent className="w-6 h-6 text-white" />
                   )}
                 </div>
-                <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">
+                <h3 className="card-title text-lg font-bold transition-colors">
                   {service.name}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-400">

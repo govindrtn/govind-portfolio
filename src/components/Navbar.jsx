@@ -57,7 +57,7 @@ export function Navbar() {
                 whileHover={{ y: -2 }}
               >
                 {item.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-blue-600 group-hover:w-full transition-all duration-300" />
+                <span className="theme-accent-gradient absolute bottom-0 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300" />
               </motion.a>
             ))}
           </div>

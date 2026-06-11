@@ -51,7 +51,7 @@ export function Contact() {
       label: "Email",
       value: portfolioData.personal.email,
       href: `mailto:${portfolioData.personal.email}`,
-      color: "text-blue-400",
+      color: "theme-accent-text",
     },
     {
       icon: Phone,
@@ -112,7 +112,7 @@ export function Contact() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -5 }}
-                className="glass-dark p-6 rounded-lg border border-slate-700 hover:border-blue-500 transition-all text-center group"
+                className="theme-hover-border glass-dark p-6 rounded-lg border border-slate-700 transition-all text-center group"
               >
                 <div
                   className={`w-12 h-12 ${info.color} mx-auto mb-3 group-hover:scale-110 transition-transform`}
@@ -263,7 +263,7 @@ export function Contact() {
                   "You receive clear updates throughout implementation.",
                 ].map((step) => (
                   <li key={step} className="flex items-start gap-3">
-                    <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-blue-400" />
+                    <CheckCircle2 className="theme-accent-text mt-0.5 h-5 w-5 flex-shrink-0" />
                     <span>{step}</span>
                   </li>
                 ))}
