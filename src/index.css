@@ -808,13 +808,61 @@ html:not(.dark) .bg-slate-900\/50 {
   background-color: rgba(255, 255, 255, 0.66);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 767px) {
   .template-menu {
     position: fixed;
     top: 4.5rem;
     right: 1rem;
     left: 1rem;
     width: auto;
+  }
+
+  html[data-layout="editorial"] .hero-layout {
+    min-width: 0;
+    gap: 2rem;
+  }
+
+  html[data-layout="editorial"] .hero-copy,
+  html[data-layout="editorial"] .hero-visual,
+  html[data-layout="editorial"] .project-card {
+    min-width: 0;
+    width: 100%;
+  }
+
+  html[data-layout="editorial"] .hero-copy h1 {
+    font-size: clamp(2.5rem, 12vw, 3.5rem);
+    overflow-wrap: anywhere;
+  }
+
+  html[data-layout="editorial"] .hero-copy h2 {
+    font-size: 1.125rem;
+  }
+
+  html[data-layout="editorial"] .hero-actions {
+    width: 100%;
+  }
+
+  html[data-layout="editorial"] .hero-actions a {
+    width: 100%;
+  }
+
+  html[data-layout="editorial"] .hero-visual {
+    max-width: calc(100% - 0.75rem);
+    margin-left: 0;
+  }
+
+  html[data-layout="editorial"] .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    overflow: visible;
+  }
+
+  html[data-layout="editorial"] .project-card p,
+  html[data-layout="editorial"] .project-card span {
+    overflow-wrap: anywhere;
+  }
+
+  html[data-layout="editorial"] .project-card > :last-child {
+    flex-direction: column;
   }
 
   .section-shell {
