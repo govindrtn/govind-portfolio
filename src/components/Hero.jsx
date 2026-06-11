@@ -56,7 +56,7 @@ export function Hero() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-center"
+          className="hero-layout grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-center"
         >
           <div className="hero-copy text-center lg:text-left">
             <motion.div variants={itemVariants} className="space-y-5">
@@ -155,7 +155,7 @@ export function Hero() {
                 <span /> Open to work
               </div>
             </motion.div>
-            <div className="grid grid-cols-2 gap-3 mt-5">
+            <div className="stats-grid grid grid-cols-2 gap-3 mt-5">
               {stats.map((stat) => (
                 <motion.div key={stat.label} whileHover={{ y: -5 }} className="stat-card">
                   <AnimatedCounter

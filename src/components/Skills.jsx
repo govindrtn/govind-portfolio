@@ -49,7 +49,7 @@ export function Skills() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="skills-grid grid md:grid-cols-2 gap-8">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={categoryIndex}
@@ -89,7 +89,7 @@ export function Skills() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mt-12 glass-dark p-8 rounded-lg border border-slate-700"
+          className="skills-core mt-12 glass-dark p-8 rounded-lg border border-slate-700"
         >
           <h3 className="theme-accent-text text-xl font-bold mb-8">Core Strengths</h3>
 

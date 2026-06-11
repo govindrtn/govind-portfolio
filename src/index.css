@@ -407,41 +407,138 @@ textarea::placeholder {
   @apply h-6 w-6 rounded-full border border-white shadow;
 }
 
-html[data-template="emerald"] .profile-image-wrap,
-html[data-template="emerald"] .profile-frame {
-  border-radius: 50% 50% 2rem 2rem;
+.layout-option-icon {
+  border-color: var(--accent-glow);
+  background: var(--accent-soft);
+  color: var(--accent);
+  @apply grid h-7 w-7 place-items-center rounded-lg border;
 }
 
-html[data-template="sunset"] .hero-copy {
-  @apply lg:rounded-[2rem] lg:border lg:border-orange-500/20 lg:bg-white/30 lg:p-8 lg:backdrop-blur-sm dark:lg:bg-slate-950/20;
+/* Independent layout presets */
+html[data-layout="editorial"] .hero-layout {
+  @apply mx-auto max-w-4xl text-center lg:grid-cols-1;
 }
 
-html[data-template="sunset"] .stat-card:nth-child(even) {
-  transform: translateY(0.75rem);
+html[data-layout="editorial"] .hero-copy {
+  @apply mx-auto max-w-3xl lg:text-center;
 }
 
-html[data-template="minimal"] .hero-orb {
-  display: none;
+html[data-layout="editorial"] .hero-copy .eyebrow,
+html[data-layout="editorial"] .hero-copy p {
+  @apply lg:mx-auto;
 }
 
-html[data-template="minimal"] .profile-frame,
-html[data-template="minimal"] .profile-frame::before,
-html[data-template="minimal"] .profile-image-wrap,
-html[data-template="minimal"] .logo-mark,
-html[data-template="minimal"] .btn-primary,
-html[data-template="minimal"] .stat-card {
-  border-radius: 0.25rem;
+html[data-layout="editorial"] .hero-copy > div,
+html[data-layout="editorial"] .hero-copy > a {
+  @apply lg:justify-center;
 }
 
-html[data-template="minimal"] .glass-dark,
-html[data-template="minimal"] .highlight-card,
-html[data-template="minimal"] .stat-card {
-  box-shadow: none;
+html[data-layout="editorial"] .hero-visual {
+  @apply max-w-sm;
+}
+
+html[data-layout="editorial"] .projects-grid,
+html[data-layout="editorial"] .skills-grid {
+  @apply mx-auto max-w-3xl md:grid-cols-1;
+}
+
+html[data-layout="editorial"] .services-grid {
+  @apply mx-auto max-w-4xl lg:grid-cols-2;
+}
+
+html[data-layout="editorial"] .about-highlights {
+  @apply mx-auto max-w-3xl md:grid-cols-1;
+}
+
+html[data-layout="compact"] main > section:not(#home) {
+  padding-top: 3.5rem !important;
+  padding-bottom: 3.5rem !important;
+}
+
+html[data-layout="compact"] #home {
+  min-height: auto;
+  padding-bottom: 3rem;
+}
+
+html[data-layout="compact"] .projects-grid {
+  gap: 1rem;
+}
+
+html[data-layout="compact"] .project-card > div {
+  padding: 1rem;
+}
+
+html[data-layout="compact"] .skills-grid,
+html[data-layout="compact"] .services-grid {
+  gap: 1rem;
+}
+
+html[data-layout="compact"] .skills-grid > div,
+html[data-layout="compact"] .services-grid > div {
+  padding: 1.25rem;
+}
+
+html[data-layout="compact"] .skills-core {
+  margin-top: 1rem;
+}
+
+html[data-layout="compact"] .about-highlights {
+  @apply lg:grid-cols-4;
 }
 
 @media (min-width: 1024px) {
-  html[data-template="minimal"] .hero-visual {
+  html[data-layout="split"] .hero-layout {
+    grid-template-columns: 0.85fr 1.15fr;
+  }
+
+  html[data-layout="split"] .hero-visual {
     order: -1;
+  }
+
+  html[data-layout="split"] .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  html[data-layout="split"] .project-card {
+    display: grid;
+    grid-template-columns: minmax(15rem, 0.75fr) 1.5fr;
+  }
+
+  html[data-layout="split"] .project-header {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    border-bottom: 0;
+    border-right: 1px solid rgba(148, 163, 184, 0.3);
+  }
+
+  html[data-layout="split"] .project-card > .flex-1 {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  html[data-layout="split"] .project-card > :last-child {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  html[data-layout="split"] .about-highlights {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  html[data-layout="compact"] .projects-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  html[data-layout="compact"] .services-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  html[data-layout="compact"] .stats-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  html[data-layout="compact"] .hero-visual {
+    max-width: 34rem;
   }
 }
 

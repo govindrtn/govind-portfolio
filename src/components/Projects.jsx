@@ -48,14 +48,14 @@ export function Projects() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-8"
+          className="projects-grid grid md:grid-cols-2 gap-8"
         >
           {portfolioData.projects.map((project, index) => (
             <motion.div
               key={project.id}
               variants={itemVariants}
               whileHover={{ y: -10 }}
-              className="theme-hover-border group glass-dark flex h-full flex-col rounded-lg overflow-hidden border border-slate-700 transition-all duration-300"
+              className="project-card theme-hover-border group glass-dark flex h-full flex-col rounded-lg overflow-hidden border border-slate-700 transition-all duration-300"
             >
               {/* Project Header */}
               <div className="project-header p-6 border-b border-slate-700">

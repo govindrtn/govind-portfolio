@@ -49,7 +49,7 @@ export function Services() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
+          className="services-grid grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
         >
           {portfolioData.services.map((service, index) => {
             const IconComponent = Icons[service.icon];

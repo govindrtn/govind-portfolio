@@ -26,7 +26,7 @@ export function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
-          className="grid gap-4 md:grid-cols-2"
+          className="about-highlights grid gap-4 md:grid-cols-2"
         >
           {portfolioData.about.highlights.map((highlight, index) => (
             <motion.div

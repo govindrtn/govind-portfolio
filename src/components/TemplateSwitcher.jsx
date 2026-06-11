@@ -42,7 +42,7 @@ export function TemplateSwitcher() {
             exit={{ opacity: 0, y: -8, scale: 0.96 }}
             className="template-menu"
           >
-            <p className="template-menu-title">Choose style</p>
+            <p className="template-menu-title">Choose color</p>
             {templates.map((option) => (
               <button
                 key={option.id}
