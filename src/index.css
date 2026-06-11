@@ -1,0 +1,305 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f8fafc;
+  color: #0f172a;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.dark body {
+  background: #07101f;
+  color: #e2e8f0;
+}
+
+section {
+  scroll-margin-top: 5rem;
+}
+
+.app-shell {
+  color: #0f172a;
+  background:
+    radial-gradient(circle at 90% 0%, rgba(59, 130, 246, 0.13), transparent 30rem),
+    linear-gradient(180deg, #f8fafc 0%, #eff6ff 50%, #f8fafc 100%);
+  transition: background 0.3s ease;
+}
+
+.dark .app-shell {
+  color: #e2e8f0;
+  background:
+    radial-gradient(circle at 90% 0%, rgba(37, 99, 235, 0.18), transparent 32rem),
+    linear-gradient(180deg, #07101f 0%, #0f172a 50%, #07101f 100%);
+}
+
+.section-shell {
+  @apply px-4 py-20 sm:px-6 lg:px-8 lg:py-28;
+}
+
+.section-tinted {
+  background: linear-gradient(180deg, transparent, rgba(219, 234, 254, 0.5), transparent);
+}
+
+.dark .section-tinted {
+  background: linear-gradient(180deg, transparent, rgba(15, 23, 42, 0.72), transparent);
+}
+
+/* Glassmorphism effect */
+.glass {
+  @apply backdrop-blur-md bg-white/10 border border-white/20;
+}
+
+.glass-dark {
+  @apply border backdrop-blur-md;
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(148, 163, 184, 0.28);
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.07);
+}
+
+.dark .glass-dark {
+  background: rgba(15, 23, 42, 0.66);
+  border-color: rgba(100, 116, 139, 0.32);
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.2);
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-gradient-to-r from-blue-600 via-indigo-500 to-violet-600 bg-clip-text text-transparent;
+}
+
+.navbar-shell {
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.navbar-scrolled {
+  background: rgba(248, 250, 252, 0.82);
+  border-color: rgba(148, 163, 184, 0.25);
+  box-shadow: 0 10px 40px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.dark .navbar-scrolled {
+  background: rgba(7, 16, 31, 0.82);
+  border-color: rgba(100, 116, 139, 0.26);
+}
+
+.logo-mark {
+  @apply grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-blue-600 to-violet-600 text-sm text-white shadow-lg shadow-blue-500/20;
+}
+
+.nav-link {
+  @apply py-2 text-sm font-medium text-slate-600 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400;
+}
+
+.icon-button,
+.theme-toggle,
+.social-button {
+  @apply inline-grid h-10 w-10 place-items-center rounded-xl border border-slate-200 bg-white/70 text-slate-700 transition-all hover:border-blue-400 hover:text-blue-600 dark:border-slate-700 dark:bg-slate-800/70 dark:text-slate-200 dark:hover:border-blue-500 dark:hover:text-blue-400;
+}
+
+.mobile-menu {
+  @apply mt-2 space-y-1 rounded-2xl border border-slate-200 bg-white/90 p-3 shadow-xl backdrop-blur-xl dark:border-slate-700 dark:bg-slate-900/90;
+}
+
+.mobile-nav-link {
+  @apply block rounded-xl px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600 dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-blue-400;
+}
+
+.hero-orb {
+  background: rgba(59, 130, 246, 0.2);
+}
+
+.hero-orb-secondary {
+  background: rgba(124, 58, 237, 0.16);
+}
+
+.eyebrow {
+  @apply inline-flex w-fit items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-xs font-semibold text-blue-700 sm:text-sm dark:border-blue-500/30 dark:bg-blue-500/10 dark:text-blue-300;
+}
+
+.profile-frame {
+  @apply relative rounded-[2rem] border border-white/70 bg-white/60 p-3 shadow-2xl shadow-blue-500/20 backdrop-blur-xl dark:border-slate-700/70 dark:bg-slate-900/60;
+}
+
+.profile-frame::before {
+  content: "";
+  @apply absolute -inset-3 -z-10 rounded-[2.5rem] bg-gradient-to-br from-blue-500/30 to-violet-500/30 blur-xl;
+}
+
+.profile-image-wrap {
+  @apply aspect-square overflow-hidden rounded-[1.5rem] bg-gradient-to-br from-blue-500 to-violet-600;
+}
+
+.profile-image {
+  @apply h-full w-full object-cover object-top;
+}
+
+.profile-status {
+  @apply absolute bottom-7 left-1/2 flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full border border-white/40 bg-slate-950/75 px-4 py-2 text-xs font-semibold text-white shadow-xl backdrop-blur-lg;
+}
+
+.profile-status span {
+  @apply h-2 w-2 rounded-full bg-emerald-400;
+  box-shadow: 0 0 0 5px rgba(52, 211, 153, 0.16);
+}
+
+.stat-card {
+  @apply flex flex-col rounded-2xl border border-slate-200 bg-white/70 p-4 text-center shadow-sm backdrop-blur-md dark:border-slate-700 dark:bg-slate-900/60;
+}
+
+.stat-card strong {
+  @apply text-lg font-black text-blue-600 dark:text-blue-400;
+}
+
+.stat-card span {
+  @apply mt-1 text-xs text-slate-500 dark:text-slate-400;
+}
+
+.about-photo-card {
+  @apply relative w-full max-w-sm overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-3 shadow-2xl shadow-blue-500/10 dark:border-slate-700 dark:bg-slate-900;
+}
+
+.about-photo-card img {
+  @apply aspect-square w-full rounded-[1.4rem] object-cover object-top;
+}
+
+.about-photo-card div {
+  @apply absolute bottom-6 left-6 right-6 flex flex-col rounded-2xl bg-slate-950/75 p-4 text-white backdrop-blur-md;
+}
+
+.about-photo-card span {
+  @apply mt-1 text-xs text-slate-300;
+}
+
+.highlight-card {
+  @apply flex items-start gap-3 rounded-2xl border border-slate-200 bg-white/70 p-4 text-slate-700 shadow-sm backdrop-blur-md dark:border-slate-700 dark:bg-slate-900/60 dark:text-slate-300;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.8);
+}
+
+/* Smooth transitions */
+button,
+a {
+  transition: all 0.3s ease;
+}
+
+/* Section animations */
+.section-reveal {
+  @apply animate-slide-in-up;
+}
+
+/* Hover effects */
+.card-hover {
+  @apply transition-all duration-300 hover:scale-105 hover:shadow-xl;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-3 font-semibold text-white shadow-lg shadow-blue-500/20 transition-all hover:-translate-y-0.5 hover:shadow-blue-500/30 active:scale-95;
+}
+
+.btn-secondary {
+  @apply rounded-xl border border-blue-300 bg-white/60 px-6 py-3 font-semibold text-blue-700 transition-all hover:-translate-y-0.5 hover:bg-blue-50 active:scale-95 dark:border-blue-500/60 dark:bg-blue-500/5 dark:text-blue-300 dark:hover:bg-blue-500/10;
+}
+
+/* Input styles */
+input,
+textarea,
+select {
+  @apply rounded-xl border border-slate-300 bg-white/70 px-4 py-3 text-slate-900 transition-all focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 dark:border-slate-700 dark:bg-slate-900/60 dark:text-slate-100;
+}
+
+input::placeholder,
+textarea::placeholder {
+  @apply text-slate-500;
+}
+
+/* Badge styles */
+.badge {
+  @apply rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-sm font-medium text-blue-700 dark:border-blue-400/30 dark:bg-blue-500/20 dark:text-blue-300;
+}
+
+html:not(.dark) .text-white,
+html:not(.dark) .text-slate-100,
+html:not(.dark) .text-slate-200,
+html:not(.dark) .text-slate-300 {
+  color: #1e293b;
+}
+
+html:not(.dark) .text-slate-400 {
+  color: #475569;
+}
+
+html:not(.dark) .text-slate-500 {
+  color: #64748b;
+}
+
+html:not(.dark) .border-slate-700 {
+  border-color: rgba(148, 163, 184, 0.35);
+}
+
+html:not(.dark) .bg-slate-800,
+html:not(.dark) .bg-slate-800\/50,
+html:not(.dark) .bg-slate-900\/50 {
+  background-color: rgba(255, 255, 255, 0.66);
+}
+
+html:not(.dark) .text-blue-300,
+html:not(.dark) .text-blue-400 {
+  color: #2563eb;
+}
+
+@media (max-width: 640px) {
+  .section-shell {
+    @apply py-16;
+  }
+
+  .glass-dark {
+    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.06);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
