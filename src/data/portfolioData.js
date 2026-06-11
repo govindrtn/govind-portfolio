@@ -116,14 +116,7 @@ export const portfolioData = {
         "Responsive user interface",
         "REST API integration",
       ],
-      technologies: [
-        "React.js",
-        "Node.js",
-        "Express.js",
-        "MongoDB",
-        "REST API",
-        "JWT",
-      ],
+      technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "REST API", "JWT"],
       link: "https://govindrtn.github.io/Gym-Website-/",
       codeLink: null,
       demoCredentials: {
@@ -147,14 +140,7 @@ export const portfolioData = {
         "Responsive dashboard UI",
         "API-integrated frontend screens",
       ],
-      technologies: [
-        "React.js",
-        "Vite",
-        "Tailwind CSS",
-        "JavaScript",
-        "TypeScript",
-        "REST API",
-      ],
+      technologies: ["React.js", "Vite", "Tailwind CSS", "JavaScript", "TypeScript", "REST API"],
       link: null,
       codeLink: null,
     },
@@ -291,5 +277,4 @@ export const portfolioData = {
     "Gym Website",
     "Other Custom Requirement",
   ],
-
 };

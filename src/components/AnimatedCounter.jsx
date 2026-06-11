@@ -5,9 +5,7 @@ export function AnimatedCounter({ decimals = 0, suffix = "", value }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-40px" });
   const count = useMotionValue(0);
-  const displayValue = useTransform(count, (latest) =>
-    `${latest.toFixed(decimals)}${suffix}`,
-  );
+  const displayValue = useTransform(count, (latest) => `${latest.toFixed(decimals)}${suffix}`);
 
   useEffect(() => {
     if (!isInView) return undefined;

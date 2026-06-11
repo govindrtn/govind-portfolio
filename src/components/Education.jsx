@@ -61,10 +61,9 @@ export function Education() {
 
           <div className="mt-8 pt-8 border-t border-slate-700">
             <p className="text-slate-400">
-              Completed my B.Tech in Electronics & Communication Engineering
-              with a focus on problem-solving and technical excellence. This
-              foundation has been instrumental in my software development
-              journey.
+              Completed my B.Tech in Electronics & Communication Engineering with a focus on
+              problem-solving and technical excellence. This foundation has been instrumental in my
+              software development journey.
             </p>
           </div>
         </motion.div>

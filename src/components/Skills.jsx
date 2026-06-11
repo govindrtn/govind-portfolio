@@ -59,9 +59,7 @@ export function Skills() {
               viewport={{ once: true }}
               className="glass-dark p-6 rounded-lg border border-slate-700"
             >
-              <h3 className="theme-accent-text text-xl font-bold mb-6">
-                {category.title}
-              </h3>
+              <h3 className="theme-accent-text text-xl font-bold mb-6">{category.title}</h3>
 
               <motion.div
                 variants={containerVariants}
@@ -77,9 +75,7 @@ export function Skills() {
                     whileHover={{ scale: 1.1, y: -2 }}
                     className="badge cursor-pointer group"
                   >
-                    <span>
-                      {skill}
-                    </span>
+                    <span>{skill}</span>
                   </motion.div>
                 ))}
               </motion.div>
@@ -95,9 +91,7 @@ export function Skills() {
           viewport={{ once: true }}
           className="mt-12 glass-dark p-8 rounded-lg border border-slate-700"
         >
-          <h3 className="theme-accent-text text-xl font-bold mb-8">
-            Core Strengths
-          </h3>
+          <h3 className="theme-accent-text text-xl font-bold mb-8">Core Strengths</h3>
 
           <div className="grid gap-x-8 gap-y-6 md:grid-cols-2">
             {[
@@ -110,12 +104,8 @@ export function Skills() {
             ].map((skill, index) => (
               <div key={index}>
                 <div className="flex justify-between items-center mb-2">
-                  <span className="text-slate-300 font-medium">
-                    {skill.name}
-                  </span>
-                  <span className="theme-accent-text font-bold">
-                    {skill.level}%
-                  </span>
+                  <span className="text-slate-300 font-medium">{skill.name}</span>
+                  <span className="theme-accent-text font-bold">{skill.level}%</span>
                 </div>
                 <div className="w-full bg-slate-800 rounded-full h-3 overflow-hidden">
                   <motion.div

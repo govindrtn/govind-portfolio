@@ -34,12 +34,9 @@ export function Footer() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-lg font-bold text-white mb-4">
-              Govind Maithil
-            </h3>
+            <h3 className="text-lg font-bold text-white mb-4">Govind Maithil</h3>
             <p className="text-slate-400 text-sm">
-              Product-focused developer building clear and reliable web
-              experiences.
+              Product-focused developer building clear and reliable web experiences.
             </p>
           </motion.div>
 
@@ -81,11 +78,7 @@ export function Footer() {
                     key={index}
                     href={link.url}
                     target={link.url.startsWith("http") ? "_blank" : undefined}
-                    rel={
-                      link.url.startsWith("http")
-                        ? "noopener noreferrer"
-                        : undefined
-                    }
+                    rel={link.url.startsWith("http") ? "noopener noreferrer" : undefined}
                     whileHover={{ scale: 1.2, rotate: 10 }}
                     whileTap={{ scale: 0.95 }}
                     className="theme-social p-2 bg-slate-800/50 text-slate-300 rounded-lg transition-all"
@@ -114,10 +107,7 @@ export function Footer() {
               <Heart className="w-4 h-4 text-red-500 inline" />
             </div>
             <p>Built with React.js, Vite, and Tailwind CSS</p>
-            <a
-              href="#home"
-              className="theme-accent-text transition-colors"
-            >
+            <a href="#home" className="theme-accent-text transition-colors">
               Back to top ↑
             </a>
           </motion.div>

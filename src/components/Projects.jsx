@@ -61,21 +61,15 @@ export function Projects() {
               <div className="project-header p-6 border-b border-slate-700">
                 <div className="flex justify-between items-start mb-2">
                   <div>
-                    <h3 className="project-header-title text-xl font-bold">
-                      {project.name}
-                    </h3>
-                    <p className="project-header-domain text-sm">
-                      {project.domain}
-                    </p>
+                    <h3 className="project-header-title text-xl font-bold">{project.name}</h3>
+                    <p className="project-header-domain text-sm">{project.domain}</p>
                   </div>
                 </div>
               </div>
 
               {/* Project Body */}
               <div className="flex-1 p-6 space-y-4">
-                <p className="text-slate-400 text-sm leading-relaxed">
-                  {project.description}
-                </p>
+                <p className="text-slate-400 text-sm leading-relaxed">{project.description}</p>
 
                 {project.demoCredentials && (
                   <div className="theme-accent-surface rounded-lg border p-3">
@@ -102,9 +96,7 @@ export function Projects() {
 
                 {/* Features */}
                 <div>
-                  <p className="text-xs font-semibold text-slate-400 mb-2">
-                    Key Features:
-                  </p>
+                  <p className="text-xs font-semibold text-slate-400 mb-2">Key Features:</p>
                   <div className="flex flex-wrap gap-2">
                     {project.features.slice(0, 4).map((feature, idx) => (
                       <span key={idx} className="badge text-xs">
@@ -116,9 +108,7 @@ export function Projects() {
 
                 {/* Tech Stack */}
                 <div>
-                  <p className="text-xs font-semibold text-slate-400 mb-2">
-                    Tech Stack:
-                  </p>
+                  <p className="text-xs font-semibold text-slate-400 mb-2">Tech Stack:</p>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech, idx) => (
                       <span

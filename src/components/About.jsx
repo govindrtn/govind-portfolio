@@ -4,10 +4,7 @@ import { portfolioData } from "../data/portfolioData";
 
 export function About() {
   return (
-    <section
-      id="about"
-      className="section-shell section-tinted"
-    >
+    <section id="about" className="section-shell section-tinted">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

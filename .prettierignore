@@ -1,0 +1,8 @@
+dist
+node_modules
+package-lock.json
+public
+FILES_CREATED.md
+PROJECT_SUMMARY.md
+QUICK_REFERENCE.md
+SETUP_GUIDE.md

@@ -120,9 +120,7 @@ export function Contact() {
                   <Icon className="w-6 h-6" />
                 </div>
                 <p className="text-sm text-slate-500 mb-1">{info.label}</p>
-                <p className="text-slate-300 font-medium text-sm break-all">
-                  {info.value}
-                </p>
+                <p className="text-slate-300 font-medium text-sm break-all">{info.value}</p>
               </motion.a>
             );
           })}
@@ -138,9 +136,7 @@ export function Contact() {
             viewport={{ once: true }}
             className="glass-dark p-8 rounded-lg border border-slate-700"
           >
-            <h3 className="text-2xl font-bold text-white mb-6">
-              Send me a Message
-            </h3>
+            <h3 className="text-2xl font-bold text-white mb-6">Send me a Message</h3>
 
             {submitStatus === "success" && (
               <motion.div
@@ -149,16 +145,13 @@ export function Contact() {
                 exit={{ opacity: 0 }}
                 className="mb-6 p-4 bg-green-500/20 border border-green-500/50 text-green-300 rounded-lg text-sm"
               >
-                ✓ Thank you! Your requirement has been received. I'll contact
-                you soon.
+                ✓ Thank you! Your requirement has been received. I'll contact you soon.
               </motion.div>
             )}
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-slate-300 mb-2">
-                  Name
-                </label>
+                <label className="block text-sm font-medium text-slate-300 mb-2">Name</label>
                 <input
                   type="text"
                   name="name"
@@ -171,9 +164,7 @@ export function Contact() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-slate-300 mb-2">
-                  Email
-                </label>
+                <label className="block text-sm font-medium text-slate-300 mb-2">Email</label>
                 <input
                   type="email"
                   name="email"
@@ -186,9 +177,7 @@ export function Contact() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-slate-300 mb-2">
-                  Phone
-                </label>
+                <label className="block text-sm font-medium text-slate-300 mb-2">Phone</label>
                 <input
                   type="tel"
                   name="phone"
@@ -218,9 +207,7 @@ export function Contact() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-slate-300 mb-2">
-                  Message
-                </label>
+                <label className="block text-sm font-medium text-slate-300 mb-2">Message</label>
                 <textarea
                   name="message"
                   value={formData.message}
@@ -253,9 +240,7 @@ export function Contact() {
             className="space-y-6"
           >
             <div className="glass-dark p-8 rounded-lg border border-slate-700">
-              <h3 className="text-xl font-bold text-white mb-4">
-                What happens next
-              </h3>
+              <h3 className="text-xl font-bold text-white mb-4">What happens next</h3>
               <ol className="space-y-4 text-sm text-slate-400">
                 {[
                   "I review your goals, scope, and current challenges.",
@@ -271,12 +256,10 @@ export function Contact() {
             </div>
 
             <div className="glass-dark p-8 rounded-lg border border-slate-700">
-              <h3 className="text-xl font-bold text-white mb-4">
-                Response Time
-              </h3>
+              <h3 className="text-xl font-bold text-white mb-4">Response Time</h3>
               <p className="text-slate-400 text-sm mb-4">
-                I typically respond within 24 hours. For time-sensitive
-                requirements, send a quick WhatsApp message.
+                I typically respond within 24 hours. For time-sensitive requirements, send a quick
+                WhatsApp message.
               </p>
               <div className="flex gap-3 pt-4 border-t border-slate-700">
                 <motion.a

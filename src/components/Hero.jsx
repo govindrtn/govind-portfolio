@@ -60,73 +60,100 @@ export function Hero() {
         >
           <div className="hero-copy text-center lg:text-left">
             <motion.div variants={itemVariants} className="space-y-5">
-            <div className="eyebrow mx-auto lg:mx-0">
-              <Sparkles className="w-4 h-4" />
-              Available for exciting frontend projects
-            </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black leading-[1.05] tracking-tight">
-              Building interfaces that feel
-              <span className="gradient-text block">fast and effortless.</span>
-            </h1>
+              <div className="eyebrow mx-auto lg:mx-0">
+                <Sparkles className="w-4 h-4" />
+                Available for exciting frontend projects
+              </div>
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black leading-[1.05] tracking-tight">
+                Building interfaces that feel
+                <span className="gradient-text block">fast and effortless.</span>
+              </h1>
 
-            <h2 className="theme-accent-text text-xl sm:text-2xl font-semibold">
-              Hi, I&apos;m {portfolioData.personal.name}, a React Developer.
-            </h2>
+              <h2 className="theme-accent-text text-xl sm:text-2xl font-semibold">
+                Hi, I&apos;m {portfolioData.personal.name}, a React Developer.
+              </h2>
 
-            <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              {portfolioData.personal.description}
-            </p>
-            <div className="flex items-center justify-center lg:justify-start gap-2 text-sm text-slate-500 dark:text-slate-400">
-              <MapPin className="theme-accent-text w-4 h-4" />
-              {portfolioData.personal.location}
-            </div>
+              <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                {portfolioData.personal.description}
+              </p>
+              <div className="flex items-center justify-center lg:justify-start gap-2 text-sm text-slate-500 dark:text-slate-400">
+                <MapPin className="theme-accent-text w-4 h-4" />
+                {portfolioData.personal.location}
+              </div>
             </motion.div>
 
             <motion.div
-            variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mt-8"
-          >
-            <motion.a
-              href="#projects"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="btn-primary inline-flex items-center justify-center gap-2"
+              variants={itemVariants}
+              className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mt-8"
             >
-              Explore My Work
-              <ArrowDown className="w-4 h-4" />
-            </motion.a>
+              <motion.a
+                href="#projects"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="btn-primary inline-flex items-center justify-center gap-2"
+              >
+                Explore My Work
+                <ArrowDown className="w-4 h-4" />
+              </motion.a>
 
-            <motion.a
-              href="#contact"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="btn-secondary inline-flex items-center justify-center gap-2"
+              <motion.a
+                href="#contact"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="btn-secondary inline-flex items-center justify-center gap-2"
+              >
+                <Mail className="w-4 h-4" />
+                Contact Me
+              </motion.a>
+            </motion.div>
+
+            <motion.div
+              variants={itemVariants}
+              className="flex justify-center lg:justify-start gap-3 mt-6"
             >
-              <Mail className="w-4 h-4" />
-              Contact Me
-            </motion.a>
-
-          </motion.div>
-
-            <motion.div variants={itemVariants} className="flex justify-center lg:justify-start gap-3 mt-6">
               {[
-                { href: `https://${portfolioData.personal.linkedin}`, label: "LinkedIn", Icon: Linkedin },
+                {
+                  href: `https://${portfolioData.personal.linkedin}`,
+                  label: "LinkedIn",
+                  Icon: Linkedin,
+                },
                 { href: `https://${portfolioData.personal.github}`, label: "GitHub", Icon: Github },
                 { href: `mailto:${portfolioData.personal.email}`, label: "Email", Icon: Mail },
               ].map(({ href, label, Icon }) => (
-                <motion.a key={label} href={href} target={href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="social-button" whileHover={{ y: -4 }} aria-label={label}>
+                <motion.a
+                  key={label}
+                  href={href}
+                  target={href.startsWith("http") ? "_blank" : undefined}
+                  rel="noopener noreferrer"
+                  className="social-button"
+                  whileHover={{ y: -4 }}
+                  aria-label={label}
+                >
                   <Icon className="w-5 h-5" />
                 </motion.a>
               ))}
             </motion.div>
           </div>
 
-          <motion.div variants={itemVariants} className="hero-visual relative max-w-md mx-auto w-full">
-            <motion.div animate={{ y: [0, -10, 0] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }} className="profile-frame">
+          <motion.div
+            variants={itemVariants}
+            className="hero-visual relative max-w-md mx-auto w-full"
+          >
+            <motion.div
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+              className="profile-frame"
+            >
               <div className="profile-image-wrap">
-                <img src={portfolioData.personal.profileImage} alt={`${portfolioData.personal.name} profile`} className="profile-image" />
+                <img
+                  src={portfolioData.personal.profileImage}
+                  alt={`${portfolioData.personal.name} profile`}
+                  className="profile-image"
+                />
               </div>
-              <div className="profile-status"><span /> Open to work</div>
+              <div className="profile-status">
+                <span /> Open to work
+              </div>
             </motion.div>
             <div className="grid grid-cols-2 gap-3 mt-5">
               {stats.map((stat) => (

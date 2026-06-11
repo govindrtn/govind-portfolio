@@ -72,11 +72,7 @@ export function Navbar() {
               className="lg:hidden icon-button"
               aria-label={isOpen ? "Close navigation" : "Open navigation"}
             >
-              {isOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
@@ -84,24 +80,24 @@ export function Navbar() {
         {/* Mobile Navigation */}
         <AnimatePresence>
           {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="lg:hidden mobile-menu"
-          >
-            {navItems.map((item, index) => (
-              <motion.a
-                key={index}
-                href={item.href}
-                onClick={() => setIsOpen(false)}
-                className="mobile-nav-link"
-                whileHover={{ x: 4 }}
-              >
-                {item.name}
-              </motion.a>
-            ))}
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="lg:hidden mobile-menu"
+            >
+              {navItems.map((item, index) => (
+                <motion.a
+                  key={index}
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className="mobile-nav-link"
+                  whileHover={{ x: 4 }}
+                >
+                  {item.name}
+                </motion.a>
+              ))}
+            </motion.div>
           )}
         </AnimatePresence>
       </div>

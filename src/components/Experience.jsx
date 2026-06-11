@@ -49,9 +49,7 @@ export function Experience() {
               >
                 <div className="flex items-start justify-between mb-3">
                   <div>
-                    <h3 className="theme-accent-text text-xl font-bold">
-                      {exp.role}
-                    </h3>
+                    <h3 className="theme-accent-text text-xl font-bold">{exp.role}</h3>
                     <p className="text-slate-400">{exp.company}</p>
                   </div>
                   <Briefcase className="theme-accent-text w-5 h-5 flex-shrink-0" />
@@ -76,15 +74,10 @@ export function Experience() {
                 <p className="text-slate-300 text-sm mb-4">{exp.description}</p>
 
                 <div className="mb-4">
-                  <p className="text-xs font-semibold text-slate-400 mb-2">
-                    Key Responsibilities:
-                  </p>
+                  <p className="text-xs font-semibold text-slate-400 mb-2">Key Responsibilities:</p>
                   <ul className="space-y-1">
                     {exp.responsibilities.slice(0, 3).map((resp, idx) => (
-                      <li
-                        key={idx}
-                        className="text-sm text-slate-400 flex items-start gap-2"
-                      >
+                      <li key={idx} className="text-sm text-slate-400 flex items-start gap-2">
                         <span className="theme-accent-text mt-1">•</span>
                         {resp}
                       </li>
