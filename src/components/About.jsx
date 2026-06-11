@@ -29,42 +29,22 @@ export function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
-          className="grid lg:grid-cols-[0.8fr_1.2fr] gap-8 items-center"
+          className="grid gap-4 md:grid-cols-2"
         >
-          {/* Left - Profile Image / Visual */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-            className="flex justify-center"
-          >
-            <div className="about-photo-card">
-              <img src={portfolioData.personal.profileImage} alt={`${portfolioData.personal.name} portrait`} />
-              <div>
-                <strong>{portfolioData.personal.name}</strong>
-                <span>{portfolioData.personal.title}</span>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Right - Highlights */}
-          <div className="space-y-4">
-            {portfolioData.about.highlights.map((highlight, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ x: 6 }}
-                className="highlight-card"
-              >
-                <CheckCircle2 className="w-5 h-5 text-blue-400 flex-shrink-0 mt-1" />
-                <span className="text-slate-300">{highlight}</span>
-              </motion.div>
-            ))}
-          </div>
+          {portfolioData.about.highlights.map((highlight, index) => (
+            <motion.div
+              key={highlight}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.08 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -4 }}
+              className="highlight-card"
+            >
+              <CheckCircle2 className="w-5 h-5 text-blue-400 flex-shrink-0 mt-1" />
+              <span>{highlight}</span>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>
