@@ -3,31 +3,6 @@ import * as Icons from "lucide-react";
 import { portfolioData } from "../data/portfolioData";
 
 export function Services() {
-  const contactMethods = [
-    {
-      name: "Call Me",
-      description: "Direct phone call",
-      action: `tel:${portfolioData.personal.phone.replace(/\s/g, "")}`,
-      icon: "Phone",
-      color: "from-blue-600 to-blue-500",
-    },
-    {
-      name: "Email Me",
-      description: "Send an email",
-      action: `mailto:${portfolioData.personal.email}`,
-      icon: "Mail",
-      color: "from-purple-600 to-purple-500",
-    },
-    {
-      name: "WhatsApp Me",
-      description: "Quick message",
-      action:
-        "https://wa.me/918602443526?text=Hi%20Govind,%20I%20want%20to%20discuss%20a%20website%20or%20web%20application%20requirement.",
-      icon: "MessageCircle",
-      color: "from-green-600 to-green-500",
-    },
-  ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -64,8 +39,7 @@ export function Services() {
             Services I <span className="gradient-text">Offer</span>
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto text-lg">
-            Need a website or custom web application? I can help you build
-            modern, responsive, and professional solutions.
+            Focused development support for products, businesses, and new ideas.
           </p>
         </motion.div>
 
@@ -94,6 +68,9 @@ export function Services() {
                 <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">
                   {service.name}
                 </h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-400">
+                  {service.description}
+                </p>
               </motion.div>
             );
           })}
@@ -108,69 +85,22 @@ export function Services() {
           className="glass-dark p-8 rounded-lg border border-slate-700 text-center mb-12"
         >
           <h3 className="text-2xl font-bold text-white mb-4">
-            Have a Project or Requirement?
+            Have a project in mind?
           </h3>
           <p className="text-slate-400 mb-8 max-w-2xl mx-auto">
-            I'm here to help you build modern, responsive, and professional
-            websites or web applications for your business, personal brand,
-            startup, or any custom requirement.
+            Share the problem, current stage, and desired outcome. I will help
+            you identify a practical path forward.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
-            {contactMethods.map((method, index) => {
-              const IconComponent = Icons[method.icon];
-              return (
-                <motion.a
-                  key={index}
-                  href={method.action}
-                  target={method.action.startsWith("http") ? "_blank" : "_self"}
-                  rel={
-                    method.action.startsWith("http")
-                      ? "noopener noreferrer"
-                      : ""
-                  }
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r ${method.color} text-white rounded-lg font-semibold hover:shadow-lg transition-all`}
-                >
-                  {IconComponent && <IconComponent className="w-5 h-5" />}
-                  {method.name}
-                </motion.a>
-              );
-            })}
-          </div>
-        </motion.div>
-
-        {/* Quick Links */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <p className="text-slate-400 text-sm mb-4">
-            Or connect with me on my social profiles
-          </p>
-          <div className="flex justify-center gap-4">
-            {portfolioData.socialLinks.map((link, index) => {
-              const IconComponent = Icons[link.icon];
-              return (
-                <motion.a
-                  key={index}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.2, rotate: 10 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="p-3 bg-slate-800/50 hover:bg-blue-600 text-slate-300 hover:text-white rounded-lg transition-all"
-                  aria-label={link.name}
-                >
-                  {IconComponent && <IconComponent className="w-5 h-5" />}
-                </motion.a>
-              );
-            })}
-          </div>
+          <motion.a
+            href="#contact"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="btn-primary inline-flex items-center justify-center gap-2"
+          >
+            Start a Conversation
+            <Icons.ArrowRight className="h-5 w-5" />
+          </motion.a>
         </motion.div>
       </div>
     </section>

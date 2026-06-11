@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Linkedin, Github } from "lucide-react";
+import { CheckCircle2, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
-import { experienceLabel, portfolioData } from "../data/portfolioData";
+import { portfolioData } from "../data/portfolioData";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -254,40 +254,20 @@ export function Contact() {
           >
             <div className="glass-dark p-8 rounded-lg border border-slate-700">
               <h3 className="text-xl font-bold text-white mb-4">
-                Why Contact Me?
+                What happens next
               </h3>
-              <ul className="space-y-3 text-slate-400 text-sm">
-                <li className="flex items-start gap-3">
-                  <span className="text-blue-400 font-bold">✓</span>
-                  <span>
-                    {experienceLabel} years of professional frontend development
-                    experience
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-blue-400 font-bold">✓</span>
-                  <span>
-                    Expert in React.js, JavaScript, TypeScript, and Tailwind CSS
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-blue-400 font-bold">✓</span>
-                  <span>
-                    Experience with healthcare, insurance, and real estate
-                    projects
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-blue-400 font-bold">✓</span>
-                  <span>
-                    Responsive design and performance optimization specialist
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-blue-400 font-bold">✓</span>
-                  <span>Quick turnaround and excellent communication</span>
-                </li>
-              </ul>
+              <ol className="space-y-4 text-sm text-slate-400">
+                {[
+                  "I review your goals, scope, and current challenges.",
+                  "We align on the most practical approach and priorities.",
+                  "You receive clear updates throughout implementation.",
+                ].map((step) => (
+                  <li key={step} className="flex items-start gap-3">
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-blue-400" />
+                    <span>{step}</span>
+                  </li>
+                ))}
+              </ol>
             </div>
 
             <div className="glass-dark p-8 rounded-lg border border-slate-700">
@@ -295,8 +275,8 @@ export function Contact() {
                 Response Time
               </h3>
               <p className="text-slate-400 text-sm mb-4">
-                I typically respond to inquiries within 24 hours. For urgent
-                requirements, feel free to call or message me directly.
+                I typically respond within 24 hours. For time-sensitive
+                requirements, send a quick WhatsApp message.
               </p>
               <div className="flex gap-3 pt-4 border-t border-slate-700">
                 <motion.a

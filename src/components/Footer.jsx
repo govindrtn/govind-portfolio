@@ -38,8 +38,8 @@ export function Footer() {
               Govind Maithil
             </h3>
             <p className="text-slate-400 text-sm">
-              Frontend Developer specializing in React.js, creating responsive
-              and modern web applications.
+              Product-focused developer building clear and reliable web
+              experiences.
             </p>
           </motion.div>
 

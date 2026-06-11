@@ -87,7 +87,7 @@ export function Skills() {
           ))}
         </div>
 
-        {/* Proficiency Levels */}
+        {/* Core strengths */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -96,25 +96,17 @@ export function Skills() {
           className="mt-12 glass-dark p-8 rounded-lg border border-slate-700"
         >
           <h3 className="text-xl font-bold text-blue-400 mb-8">
-            Proficiency Levels
+            Core Strengths
           </h3>
 
           <div className="grid gap-x-8 gap-y-6 md:grid-cols-2">
             {[
               { name: "React.js", level: 90 },
-              { name: "JavaScript ES6+", level: 90 },
-              { name: "TypeScript", level: 88 },
-              { name: "HTML5", level: 95 },
-              { name: "CSS3 & Responsive Design", level: 85 },
-              { name: "SCSS", level: 85 },
-              { name: "Tailwind CSS", level: 82 },
-              { name: "Bootstrap", level: 78 },
-              { name: "Redux & Redux Toolkit", level: 78 },
-              { name: "Context API", level: 90 },
+              { name: "JavaScript & TypeScript", level: 90 },
+              { name: "Responsive UI Engineering", level: 88 },
+              { name: "State Management", level: 84 },
               { name: "REST API Integration", level: 88 },
-              { name: "Node.js & Express.js", level: 62 },
-              { name: "MongoDB", level: 60 },
-              { name: "Git & GitHub", level: 85 },
+              { name: "Node.js & Express.js", level: 65 },
             ].map((skill, index) => (
               <div key={index}>
                 <div className="flex justify-between items-center mb-2">

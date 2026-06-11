@@ -32,24 +32,20 @@ export const portfolioData = {
 
   about: {
     title: "About Me",
-    description: `I am a Frontend Developer / React Developer with ${experienceLabel} years of experience building scalable, responsive, and user-friendly web applications. I have worked on product-based projects across healthcare, real estate, employee benefits, insurance, group management, and policy management domains.`,
+    description: `I am a product-focused developer with ${experienceLabel} years of experience turning complex workflows into clear, reliable web experiences.`,
     highlights: [
-      "Reusable UI component development",
-      "API integration",
-      "Node.js and Express.js backend development",
-      "Responsive web design",
-      "Dashboard and admin panel development",
-      "Healthcare, insurance, employee benefits, and real estate projects",
-      "Cross-browser compatible UI",
-      "Performance optimization",
+      "Built product workflows across healthcare, insurance, employee benefits, and real estate",
+      "Turned complex business requirements into intuitive dashboards and admin experiences",
+      "Created scalable component systems with a strong focus on performance and maintainability",
+      "Delivered responsive frontend experiences and full-stack projects from idea to deployment",
     ],
   },
 
   stats: [
     { label: "Years Experience", value: experienceLabel },
-    { label: "React.js Specialist", value: "React" },
-    { label: "Domain Experience", value: "Healthcare" },
-    { label: "Responsive Web Apps", value: "Mobile" },
+    { label: "Product Domains", value: "4+" },
+    { label: "Featured Projects", value: "4" },
+    { label: "Full-Stack Build", value: "1" },
   ],
 
   experience: [
@@ -241,16 +237,36 @@ export const portfolioData = {
   },
 
   services: [
-    { name: "Business Website Development", icon: "Globe" },
-    { name: "Portfolio Website", icon: "Briefcase" },
-    { name: "Admin Dashboard", icon: "LayoutDashboard" },
-    { name: "CRM Dashboard", icon: "Users" },
-    { name: "Stock Management System", icon: "Package" },
-    { name: "Billing System UI", icon: "FileText" },
-    { name: "Gym Website", icon: "Dumbbell" },
-    { name: "Landing Page", icon: "Rocket" },
-    { name: "React.js Web Application", icon: "Code" },
-    { name: "Responsive UI Development", icon: "Smartphone" },
+    {
+      name: "Product Frontend",
+      description: "Scalable React applications built around real business workflows.",
+      icon: "Code",
+    },
+    {
+      name: "Dashboards & Portals",
+      description: "Clear, responsive interfaces for operations, analytics, and administration.",
+      icon: "LayoutDashboard",
+    },
+    {
+      name: "Business Websites",
+      description: "Fast, polished websites that communicate your brand and convert visitors.",
+      icon: "Globe",
+    },
+    {
+      name: "Full-Stack MVPs",
+      description: "Working prototypes with frontend, APIs, authentication, and database.",
+      icon: "Rocket",
+    },
+    {
+      name: "UI Modernization",
+      description: "Responsive redesigns and reusable components for existing products.",
+      icon: "Sparkles",
+    },
+    {
+      name: "Performance & Quality",
+      description: "Focused improvements for usability, maintainability, and page speed.",
+      icon: "Gauge",
+    },
   ],
 
   education: {
@@ -271,21 +287,4 @@ export const portfolioData = {
     "Other Custom Requirement",
   ],
 
-  socialLinks: [
-    {
-      name: "LinkedIn",
-      url: "https://linkedin.com/in/govind-maithil-30a20816a",
-      icon: "Linkedin",
-    },
-    {
-      name: "GitHub",
-      url: "https://github.com/govindrtn",
-      icon: "Github",
-    },
-    {
-      name: "Email",
-      url: "mailto:govindmaithilrtn@gmail.com",
-      icon: "Mail",
-    },
-  ],
 };
