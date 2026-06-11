@@ -76,7 +76,7 @@ body {
 }
 
 section {
-  scroll-margin-top: 5rem;
+  scroll-margin-top: 7rem;
 }
 
 .app-shell {
@@ -313,29 +313,6 @@ textarea::placeholder {
   @apply h-6 w-6 rounded-full border border-white shadow;
 }
 
-html[data-template]:not([data-template="ocean"]) [class*="text-blue-"] {
-  color: var(--accent) !important;
-}
-
-html[data-template]:not([data-template="ocean"]) [class*="border-blue-"] {
-  border-color: var(--accent-glow) !important;
-}
-
-html[data-template]:not([data-template="ocean"]) [class*="bg-blue-"] {
-  background-color: var(--accent-soft) !important;
-}
-
-html[data-template]:not([data-template="ocean"]) [class*="from-blue-"] {
-  --tw-gradient-from: var(--accent) var(--tw-gradient-from-position) !important;
-  --tw-gradient-to: transparent var(--tw-gradient-to-position) !important;
-}
-
-html[data-template]:not([data-template="ocean"]) [class*="to-blue-"],
-html[data-template]:not([data-template="ocean"]) [class*="to-indigo-"],
-html[data-template]:not([data-template="ocean"]) [class*="to-violet-"] {
-  --tw-gradient-to: var(--accent-deep) var(--tw-gradient-to-position) !important;
-}
-
 html[data-template="emerald"] .profile-image-wrap,
 html[data-template="emerald"] .profile-frame {
   border-radius: 50% 50% 2rem 2rem;
@@ -347,6 +324,15 @@ html[data-template="sunset"] .hero-copy {
 
 html[data-template="sunset"] .stat-card:nth-child(even) {
   transform: translateY(0.75rem);
+}
+
+html[data-template="sunset"] .project-header {
+  background-image: linear-gradient(135deg, #9a3412, #9f1239);
+}
+
+html[data-template="sunset"] .project-header h3,
+html[data-template="sunset"] .project-header p {
+  color: #fff7ed;
 }
 
 html[data-template="minimal"] .hero-orb {

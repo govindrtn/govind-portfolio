@@ -55,10 +55,10 @@ export function Projects() {
               key={project.id}
               variants={itemVariants}
               whileHover={{ y: -10 }}
-              className="group glass-dark rounded-lg overflow-hidden border border-slate-700 hover:border-blue-500 transition-all duration-300"
+              className="group glass-dark flex h-full flex-col rounded-lg overflow-hidden border border-slate-700 hover:border-blue-500 transition-all duration-300"
             >
               {/* Project Header */}
-              <div className="bg-gradient-to-r from-blue-600/20 to-blue-500/20 p-6 border-b border-slate-700">
+              <div className="project-header bg-gradient-to-r from-blue-600/20 to-blue-500/20 p-6 border-b border-slate-700">
                 <div className="flex justify-between items-start mb-2">
                   <div>
                     <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
@@ -70,7 +70,7 @@ export function Projects() {
               </div>
 
               {/* Project Body */}
-              <div className="p-6 space-y-4">
+              <div className="flex-1 p-6 space-y-4">
                 <p className="text-slate-400 text-sm leading-relaxed">
                   {project.description}
                 </p>
