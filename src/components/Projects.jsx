@@ -139,7 +139,7 @@ export function Projects() {
                 ) : (
                   <span className="project-action flex-1 inline-flex items-center justify-center gap-2 py-2 px-4 rounded-lg text-sm font-medium">
                     <Lock className="w-4 h-4" />
-                    Private Project
+                    {project.status || "Private Project"}
                   </span>
                 )}
                 {project.codeLink && (

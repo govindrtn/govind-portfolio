@@ -216,11 +216,11 @@ section {
 
 .profile-image-wrap {
   background-image: linear-gradient(135deg, var(--accent), var(--accent-deep));
-  @apply aspect-square overflow-hidden rounded-[1.5rem];
+  @apply aspect-[15/16] overflow-hidden rounded-[1.5rem];
 }
 
 .profile-image {
-  @apply h-full w-full object-cover object-center;
+  @apply h-full w-full object-cover object-top;
 }
 
 .profile-status {

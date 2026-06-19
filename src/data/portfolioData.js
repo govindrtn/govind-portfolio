@@ -49,8 +49,8 @@ export const portfolioData = {
       suffix: "+",
     },
     { label: "Product Domains", value: 4, suffix: "+" },
-    { label: "Featured Projects", value: 4 },
-    { label: "Full-Stack Build", value: 1 },
+    { label: "Featured Projects", value: 7 },
+    { label: "Full-Stack Build", value: 3 },
   ],
 
   experience: [
@@ -102,6 +102,77 @@ export const portfolioData = {
   ],
 
   projects: [
+    {
+      id: 5,
+      name: "Dhunify",
+      domain: "Music Streaming / Full-Stack Web Application",
+      description:
+        "A responsive legal music streaming platform with smart search, full-track playback, playlists, favorites, and a polished multi-device player experience.",
+      features: [
+        "Smart multi-source music search",
+        "Queue, seek, shuffle, and repeat controls",
+        "Favorites, history, and custom playlists",
+        "Responsive mini and full-screen player",
+        "Artist pages and resilient artwork",
+        "Legal music source integrations",
+      ],
+      technologies: [
+        "React.js",
+        "Vite",
+        "Tailwind CSS",
+        "Zustand",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+      ],
+      link: "https://dhunify.vercel.app",
+      codeLink: "https://github.com/govindrtn/freewave-music",
+    },
+    {
+      id: 6,
+      name: "SplitAdda",
+      domain: "Expense Sharing / Full-Stack Web Application",
+      description:
+        "An INR-focused expense sharing application for friends, flatmates, teams, and trips, with flexible bill splits and simplified settlement suggestions.",
+      features: [
+        "JWT authentication and session restore",
+        "Groups, friends, and shared expenses",
+        "Equal, exact, and percentage splits",
+        "Balance and settlement summaries",
+        "Responsive dashboard and mobile navigation",
+        "Dark mode and UI animations",
+      ],
+      technologies: [
+        "React.js",
+        "Vite",
+        "Tailwind CSS",
+        "Zustand",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+      ],
+      link: null,
+      codeLink: null,
+      status: "In Development",
+    },
+    {
+      id: 7,
+      name: "Roshan Sweets Menu",
+      domain: "Restaurant / Digital Menu",
+      description:
+        "A bilingual digital menu for Roshan Sweets featuring fast food discovery, authentic product visuals, business details, and direct location and contact access.",
+      features: [
+        "English and Hindi language switch",
+        "Category filters and food search",
+        "Responsive menu-first layout",
+        "Permanent QR menu access",
+        "Google Maps and call actions",
+        "Animated branded interface",
+      ],
+      technologies: ["React.js", "Vite", "Tailwind CSS", "JavaScript", "CSS Animations"],
+      link: "https://roshan-sweets-menu.vercel.app",
+      codeLink: "https://github.com/govindrtn/roshan-sweets-qr-menu",
+    },
     {
       id: 4,
       name: "Silver Gym Management System",
